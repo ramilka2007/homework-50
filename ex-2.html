@@ -49,6 +49,29 @@
         );
     };
 
+    const Achieve = (props) => {
+        return(
+            <div className="container achieve-container">
+                <div className="achieve-item icon-backpack">
+                    <span>{props.achieve1Count}</span>
+                    <strong>{props.achieve1Description}</strong>
+                </div>
+                <div className="achieve-item icon-clock">
+                    <span>{props.achieve2Count}</span>
+                    <strong>{props.achieve2Description}</strong>
+                </div>
+                <div className="achieve-item icon-star">
+                    <span>{props.achieve3Count}</span>
+                    <strong>{props.achieve3Description}</strong>
+                </div>
+                <div className="achieve-item icon-heart">
+                    <span>{props.achieve4Count}</span>
+                    <strong>{props.achieve4Description}</strong>
+                </div>
+            </div>
+        )
+    }
+
     const site = (
         <div>
             <header>
@@ -64,10 +87,17 @@
                     title={"Amelia Woods"}
                     body={"I am a Graphic & Web Designer based in New York, specializing in User Interface Design and Development."}/>
             </div>
+            <div className="achieve">
+                <Achieve
+                    achieve1Count={528} achieve1Description={"projects completed"}
+                    achieve2Count={1465} achieve2Description={"working hours"}
+                    achieve3Count={612} achieve3Description={"positive feedbacks"}
+                    achieve4Count={735} achieve4Description={"happy clients"}/>
+            </div>
         </div>
     )
 
-    ReactDOM.render(releaseAmeliaWoods, document.getElementById('app'));
+    ReactDOM.render(site, document.getElementById('app'));
 </script>
 </body>
 </html>
