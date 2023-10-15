@@ -30,6 +30,43 @@
         header h1 {
             margin: 0;
         }
+
+        .list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            background: white;
+            border-radius: 20px;
+            align-items: center;
+            width: 600px;
+            margin: 20px auto 0 auto;
+        }
+
+        .poster {
+            width: 400px;
+            border-radius: 20px;
+            background: black;
+            color: white;
+        }
+
+        .img-poster > img {
+            width: 400px;
+            height: auto;
+            border-radius: 20px 20px 0 0 ;
+        }
+
+        .body-poster {
+            padding: 10px;
+        }
+
+        .body-poster > h1 {
+            font-size: 25px;
+        }
+
+        .body-poster > p {
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
@@ -42,5 +79,30 @@
 <div class="container">
     <div id="app"></div>
 </div>
+
+<script type="text/babel">
+    const Film = ({poster, name, year}) => {
+        return (
+            <div className="poster">
+                <div className="img-poster">
+                    <img src={poster} alt={'Name of film: ' + name}/>
+                </div>
+                <div className="body-poster">
+                    <h1>Name: {name}</h1>
+                    <p>Release: {year}</p>
+                </div>
+            </div>
+        );
+    };
+
+    const films = (
+        <div className="list">
+            <Film name="Doctor Strange in the Multiverse of Madness" year={2 + " May in " + 2022} poster="https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/18bc685e-9c23-4b97-9cc3-8a2b17a0c9ad/300x450"/>
+            <Film name="Maleficent Mistress of Evil" year={18 + " October in " + 2019} poster="https://upload.wikimedia.org/wikipedia/ru/b/b0/Maleficent_-_Mistress_of_Evil_%28poster%29.jpg"/>
+            <Film name="Frozen II" year={22 + " November in " + 2019} poster={"https://ueeshop.ly200-cdn.com/u_file/UPAI/UPAI497/1910/photo/6b857abe61.jpg"}/></div>
+    );
+
+    ReactDOM.render(films, document.getElementById('app'));
+</script>
 </body>
 </html>
