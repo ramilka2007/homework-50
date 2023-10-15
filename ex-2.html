@@ -80,12 +80,24 @@
                         <img src={props.photo} alt="about-me"/>
                     </div>
                     <div className="info">
-                        <h2>{props.about}</h2>
+                        <h2>{props.title}</h2>
                         <p>{props.description1}</p>
                         <p>{props.description2}</p>
                     </div>
                 </div>
                 <p className="under-title-text">{props.description3}</p>
+            </div>
+        );
+    };
+
+    const Project = (props) => {
+        return (
+            <div className="container">
+                <h2>{props.title}</h2>
+                <p>{props.description}</p>
+                <div className="btn">
+                    <a href="#">{props.button}</a>
+                </div>
             </div>
         )
     }
@@ -117,13 +129,22 @@
             <div className="about-me">
                 <AboutMe
                     photo={"images/About-me-photo.jpg"}
-                    about={"About me"}
+                    title={"About me"}
                     description1={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident aspernatur eum officiis, velit repudiandae aut doloremque nihil molestias epellat. Pariatur incidunt."}
                     description2={"So the above May stars cattle fruitful face shall. Tree it, winged. Every signs male firmament us. Morning him. orporis quo obcaecati laborum voluptatum, minima quod? Repellat, saepe? A, suscipit deserunt quia quaerat."}
                     description3={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident aspernatur eum officiis, velit repudiandae aut doloremque nihil molestias epellat. Pariatur incidunt. Facilis fugiat excepturi sed explicabo dignissimos magni porro molestias! Autem molestiae ipsum harum consectetur voluptate Minus odio suscipit alias? Sit possimus quasi ad libero ipsam laudantium nobis."}/>
             </div>
+
+            <div className="project">
+                <Project
+                    title={"Need a Project?"}
+                    description={" Let us know what you're looking for in an agency. We'll take a look and see if this could be the start of something beautiful."}
+                    button={"let's talk"}/>
+            </div>
+
+
         </div>
-    )
+    );
 
     ReactDOM.render(site, document.getElementById('app'));
 </script>
