@@ -37,8 +37,8 @@
                     </nav>
                 </div>
             </div>
-        )
-    }
+        );
+    };
 
     const AmeliaWoods = (props) => {
         return (
@@ -99,8 +99,17 @@
                     <a href="#">{props.button}</a>
                 </div>
             </div>
-        )
-    }
+        );
+    };
+
+    const Footer = (props) => {
+        return (
+            <div className="container">
+                <span>{props.company}</span>
+                <p>{props.aboutSite}</p>
+            </div>
+        );
+    };
 
     const site = (
         <div>
@@ -142,7 +151,11 @@
                     button={"let's talk"}/>
             </div>
 
-
+            <footer className="footer">
+                <Footer
+                    company={"Piroll Design, Inc."}
+                    aboutSite={"© 2017 Piroll. All rights reserved. Designed by robirurk."}/>
+            </footer>
         </div>
     );
 
