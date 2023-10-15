@@ -69,6 +69,24 @@
                     <strong>{props.achieve4Description}</strong>
                 </div>
             </div>
+        );
+    };
+
+    const AboutMe = (props) => {
+        return (
+            <div className="container about-me-container">
+                <div className="about-me-inner">
+                    <div className="about-me-photo">
+                        <img src={props.photo} alt="about-me"/>
+                    </div>
+                    <div className="info">
+                        <h2>{props.about}</h2>
+                        <p>{props.description1}</p>
+                        <p>{props.description2}</p>
+                    </div>
+                </div>
+                <p className="under-title-text">{props.description3}</p>
+            </div>
         )
     }
 
@@ -87,12 +105,22 @@
                     title={"Amelia Woods"}
                     body={"I am a Graphic & Web Designer based in New York, specializing in User Interface Design and Development."}/>
             </div>
+
             <div className="achieve">
                 <Achieve
                     achieve1Count={528} achieve1Description={"projects completed"}
                     achieve2Count={1465} achieve2Description={"working hours"}
                     achieve3Count={612} achieve3Description={"positive feedbacks"}
                     achieve4Count={735} achieve4Description={"happy clients"}/>
+            </div>
+
+            <div className="about-me">
+                <AboutMe
+                    photo={"images/About-me-photo.jpg"}
+                    about={"About me"}
+                    description1={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident aspernatur eum officiis, velit repudiandae aut doloremque nihil molestias epellat. Pariatur incidunt."}
+                    description2={"So the above May stars cattle fruitful face shall. Tree it, winged. Every signs male firmament us. Morning him. orporis quo obcaecati laborum voluptatum, minima quod? Repellat, saepe? A, suscipit deserunt quia quaerat."}
+                    description3={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident aspernatur eum officiis, velit repudiandae aut doloremque nihil molestias epellat. Pariatur incidunt. Facilis fugiat excepturi sed explicabo dignissimos magni porro molestias! Autem molestiae ipsum harum consectetur voluptate Minus odio suscipit alias? Sit possimus quasi ad libero ipsam laudantium nobis."}/>
             </div>
         </div>
     )
